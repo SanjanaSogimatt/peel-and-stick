@@ -165,15 +165,15 @@ code, pre { font-family: var(--mono); }
 
 /* ---------- hero ---------- */
 .hero { background: var(--paper); overflow: hidden; }
-.hero .wrap { min-height: 100svh; padding-top: 128px; padding-bottom: 96px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 64px; align-items: center; }
-.hero-copy { display: flex; flex-direction: column; gap: 28px; align-items: flex-start; min-width: 0; }
+.hero .wrap { padding-top: 136px; padding-bottom: 88px; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 48px; align-items: center; }
+.hero-copy { display: flex; flex-direction: column; gap: 24px; align-items: flex-start; min-width: 0; }
 .chip {
   display: inline-flex; align-items: center; gap: 8px; padding: 4px 12px 4px 4px; border-radius: 9999px;
   background: var(--white); box-shadow: 0 0 0 1px var(--line); font-size: 14px; line-height: 20px; font-weight: 500;
 }
 .chip b { background: var(--mint); color: var(--ink); padding: 2px 8px; border-radius: 9999px; font-weight: 600; }
 .h1 {
-  font-size: 96px; line-height: 1; letter-spacing: -0.035em; max-width: 680px;
+  font-size: 72px; line-height: 1; letter-spacing: -0.03em; max-width: 680px;
   background: linear-gradient(90deg, #000000, #666666); -webkit-background-clip: text; background-clip: text; color: transparent;
 }
 .h1 .inline-sticker {
@@ -181,7 +181,7 @@ code, pre { font-family: var(--mono); }
   animation: pop-in 700ms var(--ease) 300ms both;
 }
 .h1 .inline-sticker img { width: 100%; height: 100%; display: block; filter: drop-shadow(0 2px 2px rgba(24,22,29,.18)); }
-.hero-sub { font-size: 24px; line-height: 32px; color: var(--ink-soft); max-width: 560px; }
+.hero-sub { font-size: 20px; line-height: 28px; color: var(--ink-soft); max-width: 520px; }
 .proof { display: flex; flex-wrap: wrap; gap: 8px; }
 .proof span {
   font-size: 14px; line-height: 20px; font-weight: 500; padding: 4px 12px; border-radius: 9999px;
@@ -189,14 +189,14 @@ code, pre { font-family: var(--mono); }
   font-variant-numeric: tabular-nums;
 }
 .hero-art { position: relative; min-width: 0; display: flex; justify-content: center; padding-bottom: 24px; }
-.sheet-stack { position: relative; width: 100%; max-width: 600px; }
+.sheet-stack { position: relative; width: 100%; max-width: 500px; }
 .sheet-stack::before, .sheet-stack::after {
   content: ""; position: absolute; inset: 0; border-radius: 24px; z-index: 0;
   box-shadow: inset 0 1px 0 rgba(255,255,255,.5), 0 18px 40px -22px rgba(20,24,31,.35);
 }
 .sheet-stack::before { background: var(--pink); transform: rotate(-6deg) translate(-18px, 10px); }
 .sheet-stack::after { background: var(--yellow); transform: rotate(5deg) translate(16px, 18px); }
-.hero-art .pas-sheet { position: relative; z-index: 1; transform: rotate(1deg); width: 100%; gap: 32px; padding: 40px 32px; background: var(--white); }
+.hero-art .pas-sheet { position: relative; z-index: 1; transform: rotate(1deg); width: 100%; gap: 24px; padding: 32px 24px; background: var(--white); }
 .peel-hint {
   position: absolute; z-index: 3; left: -8px; top: -56px; font-size: 16px; font-weight: 600; color: var(--pink);
   display: flex; align-items: center; gap: 8px; transform: rotate(-6deg);
@@ -229,18 +229,23 @@ code, pre { font-family: var(--mono); }
 
 @keyframes pop-in { 0% { transform: scale(0) rotate(-30deg); } 100% { transform: scale(1) rotate(-8deg); } }
 @media (max-width: 1240px) {
-  .h1 { font-size: 72px; }
+  .h1 { font-size: 60px; }
+  .hero-art .pas-sheet { gap: 20px; padding: 28px 20px; }
 }
 @media (max-width: 1100px) {
-  .hero .wrap { grid-template-columns: minmax(0, 1fr); padding-top: 128px; gap: 48px; }
+  .hero .install { display: flex; flex-direction: column; align-items: stretch; }
+  .hero .install code { padding: 8px 12px; }
 }
-@media (max-width: 960px) {
-  .h1 { font-size: 72px; }
-  .sheet-stack { max-width: 560px; }
-  .hero-art { padding-top: 48px; }
+@media (max-width: 900px) {
+  .hero .wrap { grid-template-columns: minmax(0, 1fr); padding-top: 120px; gap: 40px; }
+  .sheet-stack { max-width: 460px; }
+  .hero-art { padding-top: 32px; }
+  .hero .install { display: inline-flex; flex-direction: row; align-items: center; }
+  .hero .install code { padding: 0 12px; }
 }
 @media (max-width: 520px) {
-  .h1 { font-size: 60px; }
+  .h1 { font-size: 48px; }
+  .hero .install { display: flex; flex-direction: column; align-items: stretch; }
   .hero-sub { font-size: 18px; line-height: 28px; }
   .hero-art .pas-sheet { gap: 20px; padding: 28px 16px; }
   .loose { display: none !important; }

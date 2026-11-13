@@ -300,12 +300,12 @@ function Hero() {
           <span className="peel-hint" aria-hidden="true">go on, peel one <CurlyArrow /></span>
           <div className="sheet-stack">
             <StickerSheet>
-              <Sticker art={star} width={132} rotate={-8} alt="Smiling star sticker" onDetach={() => markPeeled("sheet-star")} />
-              <Sticker art={hello} width={204} rotate={5} alt="Hello sticker" onDetach={() => markPeeled("sheet-hello")} />
-              <Sticker art={cloud} width={160} rotate={-4} alt="Cloud sticker" onDetach={() => markPeeled("sheet-cloud")} />
-              <Sticker art={shipIt} width={136} rotate={8} alt="Ship it sticker" onDetach={() => markPeeled("sheet-ship-it")} />
-              <Sticker art={coffee} width={112} rotate={-6} alt="Coffee sticker" onDetach={() => markPeeled("sheet-coffee")} />
-              <Sticker art={wip} width={192} rotate={3} alt="Work in progress sticker" onDetach={() => markPeeled("sheet-wip")} />
+              <Sticker art={star} width={110} rotate={-8} alt="Smiling star sticker" onDetach={() => markPeeled("sheet-star")} />
+              <Sticker art={hello} width={170} rotate={5} alt="Hello sticker" onDetach={() => markPeeled("sheet-hello")} />
+              <Sticker art={cloud} width={134} rotate={-4} alt="Cloud sticker" onDetach={() => markPeeled("sheet-cloud")} />
+              <Sticker art={shipIt} width={114} rotate={8} alt="Ship it sticker" onDetach={() => markPeeled("sheet-ship-it")} />
+              <Sticker art={coffee} width={94} rotate={-6} alt="Coffee sticker" onDetach={() => markPeeled("sheet-coffee")} />
+              <Sticker art={wip} width={160} rotate={3} alt="Work in progress sticker" onDetach={() => markPeeled("sheet-wip")} />
             </StickerSheet>
           </div>
           <PeelMeter count={peeledStickers.size} />
